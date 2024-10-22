@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import MobileNavbar from './MobileNavbar';
-import DisableBodyScroll from "../components/common/DisableScroll";
+// import DisableBodyScroll from "../components/common/DisableScroll";
 
 const Layout = ({ children }) => {
   const [isToggle, setIsToggle] = useState(false);
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <DisableBodyScroll />
+      {/* <DisableBodyScroll /> */}
       <Navbar />
       <MobileNavbar toggle={isToggle} handleToggle={handleToggle} />
       <main className="container mx-auto p-8">{children}</main>
