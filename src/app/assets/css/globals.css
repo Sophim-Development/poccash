@@ -14,17 +14,6 @@
   }
 }
 
-html,
-body {
-  background: var(--foreground);
-  color: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  min-width: 375px;
-  overflow-x: hidden;
-  /* overflow: hidden; */
-  overflow-y: hidden;
-}
-
 .mobile-menu {
   @apply md:hidden;
 }
