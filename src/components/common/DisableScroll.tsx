@@ -1,20 +1,38 @@
-// @/components/DisableBodyScroll.js
-import React, { Component } from 'react';
+// // @/components/DisableBodyScroll.js
+// import React, { useEffect, useMemo } from 'react';
 
-class DisableBodyScroll extends Component {
-  componentDidMount() {
-    document.querySelector("body").classList.add("overflow-y-hidden");
-    document.querySelector("html").classList.add("overflow-y-hidden")
-  }
+// interface Props {
+//   isToggle: boolean
+// }
 
-  componentWillUnmount() {
-    document.querySelector("body").classList.remove("overflow-y-hidden");
-    document.querySelector("html").classList.remove("overflow-y-hidden");
-  }
+// const DisableBodyScroll = ({ isToggle }: Props) => {
+//    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+//   useMemo(() => {
+//     const isMobileScreen = window.innerWidth <= 768;
+//     console.log(isMobileScreen)
+//     isToggle && isMobileScreen
+//       ? (document.getElementsByTagName('body')[0].classList.add("overflow-y-hidden"),
+//         document.getElementsByTagName('html')[0].classList.add("overflow-y-hidden"))
+//       : (document.getElementsByTagName('body')[0].classList.remove("overflow-y-hidden"),
+//         document.getElementsByTagName('html')[0].classList.remove("overflow-y-hidden"));
+//   }, [isToggle]);
 
-  render() {
-    return false;
-  }
-}
+//   useEffect(() => {
+//     const handleResize = () => {
+//       setWindowWidth(window.innerWidth);
+//     };
 
-export default DisableBodyScroll;
+//     window.addEventListener('resize', handleResize);
+
+//     // Cleanup listener on component unmount
+//     return () => {
+//       window.removeEventListener('resize', handleResize);
+//     };
+//   }, []);
+
+//   return (
+//     <></>
+//   )
+// }
+
+// export default DisableBodyScroll;
